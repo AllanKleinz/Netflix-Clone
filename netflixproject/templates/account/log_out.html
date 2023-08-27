@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div>
+      <strong>Menu:</strong>
+      <ul>
+        
+        <li><a href="/accounts/email/">Change E-mail</a></li>
+        <li><a href="/accounts/logout/">Sign Out</a></li>
+        
+      </ul>
+    </div>
+    
+<h1>Sign Out</h1>
+
+<p>Are you sure you want to sign out?</p>
+
+<form method="post" action="/accounts/logout/">
+  <input type="hidden" name="csrfmiddlewaretoken" value="P1pe7O2GKrtUgQXDlgg9aKfrdirrNdMm12OxG7EhCAFphTJV2iqNOUYHgOks1xOn">
+  
+  <button type="submit">Sign Out</button>
+</form>
+
+
+
+    
+    
+    
+{% endblock content%}

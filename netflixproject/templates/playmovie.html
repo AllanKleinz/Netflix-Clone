@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class='bg-primary_black h-full w-full'>
+        {{ movie|json_script:"movie_data" }}
+        <video controls class="w-full h-screen player"></video>
+    </main>
+    <script  src ="{% static 'assets/javascript.js' %}">   </script>
+{% endblock content %}
